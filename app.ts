@@ -1,13 +1,13 @@
 import { Category } from './enums';
 import { Book, Logger, Author, Librarian, Magazine } from './interfaces';
-import { UniversityLibrarian, ReferenceItem} from './classes';
+import { UniversityLibrarian, ReferenceItem } from './classes';
 import * as util from './lib/utilityFunctions';
 
 function PrintBookInfo(book: Book): void {
-   // console.log(`${book.title} was authored by ${book.author}`);
+    // console.log(`${book.title} was authored by ${book.author}`);
 }
 
-function PrintBookInfoWithDestruct({title: bookTitle, author: bookAuthor}: Book): void {
+function PrintBookInfoWithDestruct({ title: bookTitle, author: bookAuthor }: Book): void {
     //console.log(`${bookTitle} was authored by ${bookAuthor}`);
 }
 
@@ -15,11 +15,11 @@ let [book1, book2] = util.GetAllBooks();
 // PrintBookInfo(book1);
 // PrintBookInfo(book2);
 
-function LogFavoriteBooks([book1, book2, ...others]: Book[]){
-        PrintBookInfo(book1);
-        PrintBookInfo(book2);
-        //console.log(others);
-        others.forEach(x => PrintBookInfo(x));
+function LogFavoriteBooks([book1, book2, ...others]: Book[]) {
+    PrintBookInfo(book1);
+    PrintBookInfo(book2);
+    //console.log(others);
+    others.forEach(x => PrintBookInfo(x));
 }
 
 LogFavoriteBooks(util.GetAllBooks());
@@ -54,6 +54,18 @@ booksRead.push(...schoolBooks);
 
 let poets: string[] = ['Shelley', 'Collings', 'Hughes'];
 let authors: string[] = ['Tolstoy', 'Fitzgerald', ...poets];
-console.log(authors)
+//console.log(authors)
+
+//let catalogLocation: [string, Book] = ['A 123.456', book1];
+
+interface KeyValuePair<K, V> extends Array<K | V> {
+    0: K;
+    1: V;
+}
+
+let catalogLocation: KeyValuePair<string, Book> = ['A 123.456', book1];
+console.log("location: ", catalogLocation[0])
+console.log("book: ", catalogLocation[1])
+
 
 
