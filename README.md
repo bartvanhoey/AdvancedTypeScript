@@ -12,6 +12,3 @@
     address: '123 High Street'
     phone: '333-444-555'};`
 `let { name, address phone } = person;`
-
-
-
