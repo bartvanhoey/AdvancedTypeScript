@@ -67,5 +67,37 @@ let catalogLocation: KeyValuePair<string, Book> = ['A 123.456', book1];
 //console.log("location: ", catalogLocation[0])
 //console.log("book: ", catalogLocation[1])
 
+let allBooks: Book[] = util.GetAllBooks();
+let allMagazines: Magazine[] = util.GetAllMagazines();
+
+let readingMaterial: Book | Magazine = allMagazines[0];
+
+console.log("magazine title: ", readingMaterial.title);
+console.log("magazine publisher: ", readingMaterial.publisher);
+
+function PrintTitle(item: Book | Magazine) {
+    console.log("The title of the reading item is: ", item.title);
+}
+
+//PrintTitle(allBooks[0]);
+//PrintTitle(allMagazines[0]);
+PrintTitle(readingMaterial);
+
+let serialNovel: Book & Magazine = {
+    id: 100,
+    title: 'The Gradual Tale',
+    author: 'Occasional Pen',
+    available: true,
+    category: Category.Fiction,
+    publisher: 'Serial Press'
+};
+
+
+
+
+
+
+
+
 
 
