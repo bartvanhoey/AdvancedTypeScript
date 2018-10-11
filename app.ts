@@ -64,8 +64,8 @@ interface KeyValuePair<K, V> extends Array<K | V> {
 }
 
 let catalogLocation: KeyValuePair<string, Book> = ['A 123.456', book1];
-console.log("location: ", catalogLocation[0])
-console.log("book: ", catalogLocation[1])
+//console.log("location: ", catalogLocation[0])
+//console.log("book: ", catalogLocation[1])
 
 
 
