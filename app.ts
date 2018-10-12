@@ -70,20 +70,23 @@ let catalogLocation: KeyValuePair<string, Book> = ['A 123.456', book1];
 let allBooks: Book[] = util.GetAllBooks();
 let allMagazines: Magazine[] = util.GetAllMagazines();
 
-let readingMaterial: Book | Magazine = allMagazines[0];
+//let readingMaterial: Book | Magazine = allMagazines[0];
+let readingMaterial: PrintMaterial = allMagazines[0];
 
 //console.log("magazine title: ", readingMaterial.title);
 //console.log("magazine publisher: ", readingMaterial.publisher);
 
-function PrintTitle(item: Book | Magazine) {
-  //  console.log("The title of the reading item is: ", item.title);
-}
+// function PrintTitle(item: Book | Magazine) {
+ function PrintTitle(item: PrintMaterial) {
+   //  console.log("The title of the reading item is: ", item.title);
+ }
 
 //PrintTitle(allBooks[0]);
 //PrintTitle(allMagazines[0]);
 PrintTitle(readingMaterial);
 
-let serialNovel: Book & Magazine = {
+//let serialNovel: Book & Magazine = {
+let serialNovel: Serial = {
     id: 100,
     title: 'The Gradual Tale',
     author: 'Occasional Pen',
@@ -109,6 +112,16 @@ newLibrarian.title = "Employee & Researcher";
 //newLibrarian.logTitle();
 //newLibrarian.doResearch('Economics');
 
+//let frequency: 'monthly' | 'annually' = 'annually';
+
+type Frequency = 'monthly' | 'annually';
+
+function getMagazineByFrequency(preferredFrequency: Frequency){
+    // do something here
+}
+
+type PrintMaterial = Book | Magazine;
+type Serial = Book & Magazine;
 
 
 
