@@ -42,3 +42,14 @@
     // phablet is born
     // return type has all members of Phone & Tablet types
 }`
+
+### String Literal Types
+
+`let employeeCategory: 'Manager' | 'Non-Manager' = 'Manager';`
+
+### Type Aliases
+
+`type StudentCategory = 'BaseSchoolStudent' | 'HighSchoolStudent' | 'UniversityStudent';`
+`let studCategory: StudentCategory = 'BaseSchoolStudent';`
+`let studCategory: StudentCategory = 'UniversityStudent';`
+`let studCategory: StudentCategory = 'Employee'; // COMPILER ERROR`
