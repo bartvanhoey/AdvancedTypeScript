@@ -20,7 +20,11 @@ class Researcher {
     }
 }
 
-class UniversityLibrarian implements Interfaces.Librarian {
+class UniversityLibrarian implements Interfaces.Librarian, Employee, Researcher {
+    title: string;
+    addToSchedule: () => void;
+    logTitle: () => void;
+    doResearch: (topic: string) => void;
     
     name: string;
     email: string;

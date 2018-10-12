@@ -1,6 +1,6 @@
 import { Category } from './enums';
 import { Book, Logger, Author, Librarian, Magazine } from './interfaces';
-import { UniversityLibrarian, ReferenceItem } from './classes';
+import { UniversityLibrarian, ReferenceItem, Employee, Researcher } from './classes';
 import * as util from './lib/utilityFunctions';
 
 function PrintBookInfo(book: Book): void {
@@ -91,6 +91,25 @@ let serialNovel: Book & Magazine = {
     category: Category.Fiction,
     publisher: 'Serial Press'
 };
+
+function applyMixins(derivedConstructor: any, baseConstructors: any[]){
+    baseConstructors.forEach(baseConstructor => {
+        Object.getOwnPropertyNames(baseConstructor.prototype)
+            .forEach(name => {
+                derivedConstructor.prototype[name] =baseConstructor.prototype[name];
+            });
+    });
+}
+
+applyMixins(UniversityLibrarian, [Employee, Researcher]);
+
+let newLibrarian = new UniversityLibrarian();
+
+newLibrarian.title = "Employee & Researcher";
+//newLibrarian.logTitle();
+//newLibrarian.doResearch('Economics');
+
+
 
 
 
