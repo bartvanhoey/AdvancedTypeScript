@@ -72,11 +72,11 @@ let allMagazines: Magazine[] = util.GetAllMagazines();
 
 let readingMaterial: Book | Magazine = allMagazines[0];
 
-console.log("magazine title: ", readingMaterial.title);
-console.log("magazine publisher: ", readingMaterial.publisher);
+//console.log("magazine title: ", readingMaterial.title);
+//console.log("magazine publisher: ", readingMaterial.publisher);
 
 function PrintTitle(item: Book | Magazine) {
-    console.log("The title of the reading item is: ", item.title);
+  //  console.log("The title of the reading item is: ", item.title);
 }
 
 //PrintTitle(allBooks[0]);

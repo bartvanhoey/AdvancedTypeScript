@@ -1,5 +1,10 @@
 # Advanced Typescript
 
+## How to run the project?
+
+`CTRL+SHIFT, P` and choose: 'Tasks: Run Build Task `(CTRL+SHIFT, B)`' 
+`CTRL+F5` to launch the project.
+
 ## Desctructuring arrays
 
 `let colors: string[] = ['green', ' yellow', 'blue'];`
