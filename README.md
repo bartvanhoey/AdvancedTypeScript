@@ -53,3 +53,12 @@
 `let studCategory: StudentCategory = 'BaseSchoolStudent';`
 `let studCategory: StudentCategory = 'UniversityStudent';`
 `let studCategory: StudentCategory = 'Employee'; // COMPILER ERROR`
+
+### Polymorphic *this* types
+
+### Declaration merging
+
+### Type guards
+
+### Symbols
+
