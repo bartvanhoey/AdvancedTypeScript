@@ -20,7 +20,7 @@ class Researcher {
     }
 }
 
-class UniversityLibrarian implements Interfaces.Librarian, Employee, Researcher {
+export class UniversityLibrarian implements Interfaces.Librarian, Employee, Researcher {
     title: string;
     addToSchedule: () => void;
     logTitle: () => void;
@@ -60,4 +60,4 @@ abstract class ReferenceItem {
     abstract printCitation(): void;
 }
 
-export { UniversityLibrarian, ReferenceItem, Employee, Researcher };
+export {  ReferenceItem, Employee, Researcher };
