@@ -61,14 +61,27 @@ import './librarianExtension';
 // logVisitor('Bart');
 // logVisitor(1);
 
-let librarian: Librarian;
+// let librarian: Librarian;
 
-librarian = new PublicLibrarian();
+// librarian = new PublicLibrarian();
 
-if (librarian instanceof UniversityLibrarian) {
-    librarian.assistFaculty();
+// if (librarian instanceof UniversityLibrarian) {
+//     librarian.assistFaculty();
+// }
+
+// if (librarian instanceof PublicLibrarian) {
+//     librarian.teachCommunitiy();
+// }
+
+function isBook(text: Book | Magazine): text is Book {
+    return (<Book>text).author !== undefined;
 }
 
-if (librarian instanceof PublicLibrarian) {
-    librarian.teachCommunitiy();
+let readingMaterial: Book | Magazine = util.GetAllBooks()[0];
+
+if (isBook(readingMaterial)) {
+    console.log(`The book's author is ${readingMaterial.author}.`);
+}
+else {
+    console.log(`The magazine's publisher is ${readingMaterial.publisher}.`);
 }
