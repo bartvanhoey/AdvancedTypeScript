@@ -33,6 +33,24 @@ export class UniversityLibrarian implements Interfaces.Librarian, Employee, Rese
     assistCustomer(custName: string) {
         console.log(this.name + ' is assisting ' + custName);
     }
+
+    assistFaculty(){
+        console.log('Assisting faculty.');
+    }
+}
+
+export class PublicLibrarian implements Interfaces.Librarian {
+    department: string;    
+    name: string;
+    email: string;
+    
+    assistCustomer (custName: string) {
+        console.log('Assisting Customer');
+    }
+
+    teachCommunitiy () {
+        console.log('Teaching community');
+    }
 }
 
 abstract class ReferenceItem {

@@ -1,6 +1,6 @@
 import { Category } from './enums';
 import { Book, Logger, Author, Librarian, Magazine } from './interfaces';
-import { UniversityLibrarian, ReferenceItem, Employee, Researcher } from './classes';
+import { PublicLibrarian, UniversityLibrarian, ReferenceItem, Employee, Researcher } from './classes';
 import * as util from './lib/utilityFunctions';
 import './librarianExtension';
 
@@ -49,14 +49,26 @@ import './librarianExtension';
 // newLibrarian.phone = '123-456-789';
 // newLibrarian.hostSeminar('Informatics');
 
-function logVisitor(param: number | string){
-    if (typeof param === 'number') {
-        console.log(`${param} new visitor arrived.`)
-    }
-    else {
-        console.log(`${param.toUpperCase()} visisted.`)
-    }
+// function logVisitor(param: number | string){
+//     if (typeof param === 'number') {
+//         console.log(`${param} new visitor arrived.`)
+//     }
+//     else {
+//         console.log(`${param.toUpperCase()} visisted.`)
+//     }
+// }
+
+// logVisitor('Bart');
+// logVisitor(1);
+
+let librarian: Librarian;
+
+librarian = new PublicLibrarian();
+
+if (librarian instanceof UniversityLibrarian) {
+    librarian.assistFaculty();
 }
 
-logVisitor('Bart');
-logVisitor(1);
+if (librarian instanceof PublicLibrarian) {
+    librarian.teachCommunitiy();
+}
