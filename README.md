@@ -1,8 +1,8 @@
 # Advanced Typescript
 
-## How to run the project?
+## How to run the project
 
-`CTRL+SHIFT, P` and choose: 'Tasks: Run Build Task `(CTRL+SHIFT, B)`' 
+`CTRL+SHIFT, P` and choose: 'Tasks: Run Build Task `(CTRL+SHIFT, B)`'
 `CTRL+F5` to launch the project.
 
 ## Desctructuring arrays
@@ -60,5 +60,29 @@
 
 ### Type guards
 
-### Symbols
+* typeof Type Guards
+  
+`let myVariable: string | number = 123;`
+`if (typeof myVariable === '') {`
+    `//  myVariable is a string`
+`} else {`
+    `//  myVariable is a number`
+`}`
 
+* instanceof Type Guards
+
+`let device = Phone | Tablet = new Phone();`
+`if (device instanceof Phone) {`
+    `// device.callSomeone();`
+`}`
+
+* User-Defined Type Guards
+
+`interface Vehicle { numberOfWheels: number; }`
+`function isVehicle(v: any): v is Vehicle {`
+    `return (<Vehicle>v).numberOfWheels !== undefined;`
+`}`
+`let car = new Car()`
+`if(isVehicle(car)){ // it's a vehicle}`
+
+### Symbols
