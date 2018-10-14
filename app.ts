@@ -45,23 +45,18 @@ import './librarianExtension';
 // let ebook = new ElectronicBook();
 // ebook.checkin().removeFromCustomerDevice().checkout();
 
-let newLibrarian = new UniversityLibrarian();
-newLibrarian.phone = '123-456-789';
-newLibrarian.hostSeminar('Informatics');
+// let newLibrarian = new UniversityLibrarian();
+// newLibrarian.phone = '123-456-789';
+// newLibrarian.hostSeminar('Informatics');
 
+function logVisitor(param: number | string){
+    if (typeof param === 'number') {
+        console.log(`${param} new visitor arrived.`)
+    }
+    else {
+        console.log(`${param.toUpperCase()} visisted.`)
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+logVisitor('Bart');
+logVisitor(1);
