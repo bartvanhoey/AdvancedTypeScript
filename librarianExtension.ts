@@ -7,8 +7,8 @@ declare module './classes' {
     }
 }
 
-UniversityLibrarian.prototype.hostSeminar = function(topic) {
-    console.log('Hosting a seminar on ' + topic);
-}
+// UniversityLibrarian.prototype.hostSeminar = function(topic) {
+//     console.log('Hosting a seminar on ' + topic);
+// }
 
 

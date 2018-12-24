@@ -73,15 +73,31 @@ import './librarianExtension';
 //     librarian.teachCommunitiy();
 // }
 
-function isBook(text: Book | Magazine): text is Book {
-    return (<Book>text).author !== undefined;
+// function isBook(text: Book | Magazine): text is Book {
+//     return (<Book>text).author !== undefined;
+// }
+
+// let readingMaterial: Book | Magazine = util.GetAllBooks()[0];
+
+// if (isBook(readingMaterial)) {
+//     console.log(`The book's author is ${readingMaterial.author}.`);
+// }
+// else {
+//     console.log(`The magazine's publisher is ${readingMaterial.publisher}.`);
+// }
+
+let librarian1 = new UniversityLibrarian();
+let librarian2 = new PublicLibrarian();
+
+try {
+    librarian1.assistFaculty = () => console.log("assistFaculty replaced by console.log()")
+    librarian2.teachCommunitiy = () => console.log("assistFaculty replaced by console.log()")
+} catch (error) {
+    console.log(error.message)
 }
 
-let readingMaterial: Book | Magazine = util.GetAllBooks()[0];
+librarian1.assistFaculty();
+librarian2.teachCommunitiy();
 
-if (isBook(readingMaterial)) {
-    console.log(`The book's author is ${readingMaterial.author}.`);
-}
-else {
-    console.log(`The magazine's publisher is ${readingMaterial.publisher}.`);
-}
+
+

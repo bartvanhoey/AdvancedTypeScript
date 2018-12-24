@@ -86,3 +86,5 @@
 `if(isVehicle(car)){ // it's a vehicle}`
 
 ### Symbols
+
+### Decorators
